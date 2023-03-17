@@ -4,7 +4,8 @@ public class HelloWorld
 {
     public static void Main(string[] args)
     {
-
+while (true)
+{
         Console.Out.NewLine = "\n";
     Console.WriteLine("Czego potrzebujesz?\na. Chce obliczyc pole calkowite kuli\nb. Chce obliczyc objetosc kuli\nc. Chce policzyc srednia arytmetyczna");
     string x = Console.ReadLine();
@@ -23,6 +24,8 @@ public class HelloWorld
     else 
     {
         Console.WriteLine("Nie ma takiej opcji");
+        break;
+    }
     }
     
         
