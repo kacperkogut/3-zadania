@@ -1,0 +1,33 @@
+using System;
+class HelloWorld {
+  static void Main() {
+      
+      
+ 
+    Console.WriteLine("Jaki wzor jest Ci potrzebny?\na. Pole powierzchni szescianu\nb. Objętosc kuli\nc. Objetosc walca");
+    string x = Console.ReadLine();
+    switch (x)
+{
+    case "a":
+    Console.WriteLine("Podaj dlugosc krawedzi szescianu");
+    double y = double.Parse(Console.ReadLine());
+    Console.WriteLine("Wynik: " + y * y * 6);
+    break;
+    case "b":
+    Console.WriteLine("Podaj dlugosc promienia kuli");
+    double r1 = double.Parse(Console.ReadLine());
+    Console.WriteLine("Wynik: " + (double)4/3 * Math.PI * r1 * r1 * r1);
+    break;
+    case "c":
+    Console.WriteLine("Podaj dlugosc promienia walca");
+    double r2 = double.Parse(Console.ReadLine());
+    Console.WriteLine("Podaj dlugosc wysokosci walca");
+    double h = double.Parse(Console.ReadLine());
+    Console.WriteLine("Wynik: " + Math.PI * r2 * r2 * h);
+    break;
+    default:
+    Console.WriteLine("Nie ma takiej opcji");
+    break;
+}
+}
+}
