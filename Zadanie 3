@@ -1,0 +1,73 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+
+        Console.Out.NewLine = "\n";
+    Console.WriteLine("Czego potrzebujesz?\na. Chce obliczyc pole calkowite kuli\nb. Chce obliczyc objetosc kuli\nc. Chce policzyc srednia arytmetyczna");
+    string x = Console.ReadLine();
+    if (x == "a")
+    {
+        aa();
+    }
+    else if (x == "b")
+    {
+        bb();
+    }
+    else if (x == "c")
+    {
+        cc();
+    }
+    else 
+    {
+        Console.WriteLine("Nie ma takiej opcji");
+    }
+    
+        
+
+    }
+    public static void aa()
+    {
+        double r = double.Parse(Console.ReadLine());
+        Console.WriteLine(4*Math.PI*Math.Pow(r, 2));
+    }
+        public static void bb()
+    {
+        double r = double.Parse(Console.ReadLine());
+        Console.WriteLine((double)4/3 * Math.PI * Math.Pow(r, 3));
+    }
+    public static void cc()
+    {
+int q = 0;
+int w = 0;
+int e;
+
+while (true)
+{
+    Console.WriteLine("Wpisz liczbe lub -1 zeby wyjsc:");
+    e = int.Parse(Console.ReadLine());
+
+    if (e == -1)
+    {
+        break;
+    }
+
+    q += e;
+    w++;
+}
+
+if (w == 0)
+{
+    Console.WriteLine("Nie dodales liczb");
+}
+else
+{
+    double t = (double)q / w;
+    Console.WriteLine("Srednia arytmetyczna: " + t);
+}
+
+    }
+    
+    }  
