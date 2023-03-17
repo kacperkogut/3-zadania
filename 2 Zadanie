@@ -1,0 +1,72 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+class HelloWorld {
+  static void Main() {
+      Console.Out.NewLine = "\n";
+    int[] tablica = { 2, 2, 6, 6, 3, 5, 5, 5, 5, 5, 9, 10, 11, -1, -1, -1 };
+    Console.WriteLine("Liczba elementow tablicy: " + tablica.Length); 
+    
+int[] y = tablica.Distinct().ToArray();
+Console.WriteLine("Ilosc liczb w tablicy: " + y.Length);
+
+
+int q = 0;
+int x = 0;
+foreach (int i in tablica)
+{
+    if (i % 2 == 0)
+    {
+    x++;
+    }
+    else
+    {
+        q++;
+    }
+}
+Console.WriteLine("Ilosc liczb parzystych w tablicy: " +x);
+Console.WriteLine("Ilosc liczb nieparzystych w tablicy: " +q);
+
+
+List<int> w = new List<int>();
+foreach (int j in tablica)
+{
+    if (j % 3 == 0)
+    {
+    w.Add(j);
+    }
+    else if (j % 5 == 0)
+    {
+        w.Add(j);
+    }
+}
+ int suma = 0;
+            for (int f = 0; f < w.Count; f++)
+            {
+                suma += w[f];
+            }
+            Console.WriteLine("Suma liczb podzielnych przez 3 lub 5 w tablicy: " + suma);
+
+
+
+Console.WriteLine("Podaj x");
+List<int> e = new List<int>();
+int c = int.Parse(Console.ReadLine());
+foreach (int d in tablica)
+{
+    if (d < c)
+    {
+        e.Add(d);
+    }
+}
+Console.WriteLine("Liczby mniejsze od " + c + " w tablicy: " + e.Count);
+
+
+Console.WriteLine("Podaj x");
+int g = int.Parse(Console.ReadLine());
+if(tablica.Contains(g))
+{
+    Console.WriteLine( g  + " znajduje sie w tablicy");
+}
+}
+}
